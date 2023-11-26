@@ -10,51 +10,74 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="svg">
-        <img class="svg-upper-left-corner" src="/source/blur-radial.svg" alt="" srcset="">
-    </div> -->
-    <div class="cont-section ">
-        <section>
-            <form action="" class="form1">
-                <h2>
-                    Register
-                </h2>
-                <div class="f-name f-item">
-                    <label for="GET-name">Name</label>
+    <form action="" class="container" >
+    <!--    Step1        -->
+        <div class="step" id="step1">
+            <h2>
+                Register
+            </h2>
+                <label for="GET-name">Name
                     <input class="i-text " id="GET-name" type="text" placeholder="enter your name" >
-                </div>
-                <div class="f-email f-item">
-                    <label for="GET-email">Email</label>
+                </label>
+                <!---->
+                <label for="GET-email">Email
                     <input class="i-text " id="GET-email" type="email" placeholder="example@gmail.com" >
-                </div>
-                <div class="cont-btn">
-                    <button class="btn" >continue
-                    </button>
-                </div>
-            </form>
-            <form action="" class="desactivado">
-                <h2>
-                    Register
-                </h2>
-                <div class="f-name f-item">
-                    <label for="GET-name">Nam</label>
-                    <input class="i-text " type="text" placeholder="enter your name" required>
-                </div>
-                <div class="f-email f-item">
-                    <label for="GET-email">Email</label>
-                    <input class="i-text " type="email" placeholder="example@gmail.com" required>
-                </div>
-                <!-- <div class="cont-btn">
-                    <button class="btn" value="Continue"> </button>
-                </div> -->
-            </form>
-        </section>
-        
-    </div>
+                </label>
+                <!---->
+                <button class="btn" onclick="esconder(event, 2)">
+                    Continue
+                </button>
+        </div>
+
+        <!--    Step2        -->
+        <div class="step desactivado" id="step2">
+            <h2>
+                Which topics you are interested in?
+            </h2>
+            <input type="checkbox" name="category " id="category1" value="Software Development">
+            <label for="category1">Software Development</label>
+            <!---->
+            <input type="checkbox" name="category " id="category2" value="User Experience">
+            <label for="category2">User Experience</label>
+            <!---->
+            <input type="checkbox" name="category " id="category3" value="Graphic Design">
+            <label for="category3">Graphic Design</label>
+            <!---->
+            <button class="btn" onclick="esconder(event, 3)">
+                Continue
+            </button>
+        </div>
+        <div class="step desactivado" id="step3">
+            <h2>
+                Summary
+            </h2>
+            <!---->
+            <p class="step-info">
+                Name: <span id="summary-name"> Aqui va tu nombre</span>
+                <br />
+                Email: <span id="summary-email"> Aqui va tu Correo</span>
+            </p>
+            <!---->
+            <div>
+                <p class="step-info">
+                    Topics:
+                </p>
+                <ul id="summary-category">
+                    
+                </ul>
+            </div>
+            <!---->
+            <button class="btn">
+                Confirmar
+            </button>
+        </div>
+    </form>
     <div class="state">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+        <p>
+            Step <span id="step-number">1</span> of 3
+        </p>
+        <div id="step-counter-indicator">
+        </div>
     </div>
     <!-- <div class="svg">
         <img class="svg-bottom-right-corner" src="/source/blur-radial.svg" alt="" srcset="">
